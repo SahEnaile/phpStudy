@@ -12,8 +12,27 @@ $notaFilme =  375/5;
 $IncluidonoPlano = true;
 
 echo $notaFilme;
+echo $notas = [];
+
 
 echo "Nome do Filme" .$NomeFilme. "\n Ano Lançamento" .$anoLançamento; // Interpolação usa-se sempre aspas duplas
+
+$quantidadedeNotas = $argc - 1;
+$SomadeNotas = 0;
+
+//loopings
+    for ($contador = 1; $contador < $argc; $contador ++) {
+        $notas[] = (float) $argv[$contador];
+        }
+
+  foreach($notas as $nota) {
+    $SomadeNotas += $nota[$i];
+  }      
+    $contador = 1;   
+    while ($argv[$contador] != 0) {
+        $SomadeNotas += $argv[$contador++];
+    } //argv é uma variavel especial quando o codigo roda no CLI e ele é usado para guardar valor e contar
+// if, elseif e else
 
 if ($anoLançamento >= 2022) {
     echo "esse filme é um lançamento";
@@ -31,3 +50,20 @@ $genero = match($NomeFilme) {
 };
 
 echo "Genero do filme é " .$genero;
+
+//tipo de dado array
+
+$notasParaoFilme = [7, 8, 9, 15,22, 32, 7.5];
+var_dump($notasParaoFilme);
+
+$filme = [
+"nome" => "thor",
+"ano" => 2025,
+"nota" => 7.8,
+"genero" => "animacao"
+];
+
+echo $filme['ano']; // vai printar o que foi mapeado para a chave ano
+
+
+//manipulação de arrays
