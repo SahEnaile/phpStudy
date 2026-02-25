@@ -21,7 +21,7 @@ echo"4. Sair\n";
 
 $opcao = (int) fgets(STDIN);
 
-switch ($opcap) {
+switch ($opcao) {
     case 1:
         echo"********************\n";
         echo "Titular: $titular";
