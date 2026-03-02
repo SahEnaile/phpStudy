@@ -54,7 +54,7 @@ echo "Genero do filme é " .$genero;
 //tipo de dado array
 
 $notasParaoFilme = [7, 8, 9, 15,22, 32, 7.5];
-var_dump($notasParaoFilme);
+var_dump($notasParaoFilme); // var_dump é usado para mostrar o tipo de dado e o valor da variavel, nesse caso ele vai mostrar que é um array e os valores dentro do array
 
 $filme = [
 "nome" => "thor",
@@ -67,3 +67,10 @@ echo $filme['ano']; // vai printar o que foi mapeado para a chave ano
 
 
 //manipulação de arrays
+// para verificar se todos os elementos de um array satisfazem uma condição podemos usar a função array_all()
+
+$exemploArray = [1, 2, 3, 4, 5];
+
+$verifica = array_all($exemploArray, fn($elemento) => $elemento > 0);// array_all recebe um array e uma função de callback, a função de callback é usada para verificar se cada elemento do array satisfaz a condição, nesse caso a condição é se o elemento é maior que 0
+
+echo 'array com elementos maior que 0'.($verifica ? 'Sim' : 'Não'); // operador ternário, ele é usado para verificar se a condição é verdadeira ou falsa, nesse caso ele vai verificar se a variavel $verifica é verdadeira ou falsa, se for verdadeira ele vai printar Sim, se for falsa ele vai printar Não
