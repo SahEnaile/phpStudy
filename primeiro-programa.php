@@ -74,3 +74,12 @@ $exemploArray = [1, 2, 3, 4, 5];
 $verifica = array_all($exemploArray, fn($elemento) => $elemento > 0);// array_all recebe um array e uma função de callback, a função de callback é usada para verificar se cada elemento do array satisfaz a condição, nesse caso a condição é se o elemento é maior que 0
 
 echo 'array com elementos maior que 0'.($verifica ? 'Sim' : 'Não'); // operador ternário, ele é usado para verificar se a condição é verdadeira ou falsa, nesse caso ele vai verificar se a variavel $verifica é verdadeira ou falsa, se for verdadeira ele vai printar Sim, se for falsa ele vai printar Não
+
+// array_any verifica se pelo menos um elemento do array satisfaz a condição
+$verificaany = array_any($exemploArray, fn($elemento) => $elemento > 4); // array_any recebe um array e uma função de callback, a função de callback é usada para verificar se pelo menos um elemento do array satisfaz a condição, nesse caso a condição é se o elemento é maior que 4
+echo 'array com elementos maior que 4' .($verificaany ? 'Sim' : 'Não'); // operador ternário, ele é usado para verificar se a condição é verdadeira ou falsa, nesse caso ele vai verificar se a variavel $verificaany é verdadeira ou falsa, se for verdadeira ele vai printar Sim, se for falsa ele vai printar Não
+
+// array_chunk divide um array em pedaços menores
+$arrayTeste = array_chunk($exemploArray,2); // array_chunk recebe um array e o tamanho do pedaço, nesse caso ele vai dividir o array $exemploArray em pedaços de 2 elementos
+print_r($arrayTeste); // print_r é usado para mostrar o valor da variavel,
+
