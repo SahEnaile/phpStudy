@@ -95,3 +95,18 @@ $exemplodearray2 = [
 
 $justName = array_column($exemplodearray2, 'nome'); // array_column recebe um array e o nome da coluna, nesse caso ele vai retornar um array com os valores da coluna 'nome'
 print_r($justName); // print_r é usado para mostrar o valor da variavel,
+
+//array_combine combina dois arrays, um com as chaves e outro com os valores
+$keys = ['id', 'nome'];
+$values = [1, 'João'];
+$combined = array_combine($keys, $values); // array_combine recebe dois arrays, um com as chaves e outro com os valores, nesse caso ele vai combinar os arrays $
+
+//array_count_values conta a quantidade de vezes que um valor aparece em um array
+$arrayContagem = ['maçã', 'banana', 'maçã', 'laranja', 'banana', 'maçã'];
+$contagem = array_count_values($arrayContagem); // array_count_values recebe um array e conta a quantidade de vezes que cada valor aparece no array, nesse caso ele vai contar a quantidade de vezes que cada fruta aparece no array $arrayContagem
+print_r($contagem); // print_r é usado para mostrar o valor da variavel
+
+//array_find Reotrna o primeiro valorque retorna o elemento que satisfaz a condição
+$arrayfind = ['sarah', 'joao', 'jhessica'];
+$arrayfind = array_filter($arrayfind, fn($array) => in_array($array[0], $arrayfind)); // array_filter recebe um array e uma função de callback, a função de callback é usada para verificar se cada elemento do array satisfaz a condição, nesse caso a condição é se o primeiro elemento do array está presente no array $arrayfind, e ela vai retornar um array com os elementos que satisfazem a condição
+print_r($arrayfind); // print_r é usado para mostrar o valor da variavel
